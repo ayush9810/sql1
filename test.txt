@@ -1,0 +1,29 @@
+Create a table named "testing_table" with following fields:
+
+name (string)
+contact_name (string)
+roll_no (string)
+
+Now:
+
+Delete column name, rename contact_name to username. Add two fields first_name, last_name. 
+Also change the type of roll_no to integer
+
+
+
+
+
+
+create database first;
+use first;
+create table testing_table(name varchar(25) not null,contact_name varchar(25) not null,roll_no varchar(25) not null);
+describe testing_table;
+alter table testing_table drop column name;
+desc testing_table;
+alter table testing_table change contact_name username varchar(25) not null;
+desc testing_table;
+alter table testing_table add first_name varchar(15) not null;
+alter table testing_table add last_name varchar(15) not null;
+desc testing_table;
+alter table testing_table change roll_no roll_no int(11) not null;
+desc testing_table;
